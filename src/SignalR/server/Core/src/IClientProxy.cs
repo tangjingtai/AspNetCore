@@ -1,7 +1,6 @@
 // Copyright (c) .NET Foundation. All rights reserved.
 // Licensed under the Apache License, Version 2.0. See License.txt in the project root for license information.
 
-using System;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -10,7 +9,6 @@ namespace Microsoft.AspNetCore.SignalR
     /// <summary>
     /// A proxy abstraction for invoking hub methods.
     /// </summary>
-    [Obsolete("Use the ClientProxy abstract class instead.")]
     public interface IClientProxy
     {
         // client proxy method is called SendCoreAsync instead of SendAsync so that arrays of references

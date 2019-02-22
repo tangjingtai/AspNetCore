@@ -9,9 +9,7 @@ namespace Microsoft.AspNetCore.SignalR
     /// <summary>
     /// A proxy abstraction for invoking hub methods.
     /// </summary>
-#pragma warning disable CS0618 // IClientProxy is obsolete
     public abstract class ClientProxy : IClientProxy
-#pragma warning restore CS0618 // IClientProxy is obsolete
     {
         // client proxy method is called SendCoreAsync instead of SendAsync so that arrays of references
         // like string[], e.g. SendAsync(string, string[]), do not choose SendAsync(string, object[])
