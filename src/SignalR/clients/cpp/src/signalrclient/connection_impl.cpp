@@ -298,7 +298,7 @@ namespace signalr
     {
         auto logger = m_logger;
         auto query_string = _XPLATSTR("id=" + m_connection_id);
-        auto connect_url = url_builder::build_connect(url, transport->get_transport_type(), query_string).to_string();
+        auto connect_url = url_builder::build_connect(url, transport->get_transport_type(), query_string);
 
         transport->connect(connect_url)
             .then([transport, connect_request_tce, logger](pplx::task<void> connect_task)
